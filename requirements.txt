@@ -1,5 +1,11 @@
-# huggingface_hub>=0.16.4
-huggingface_hub
-uvicorn==0.24.0.post1
-vllm==0.2.7
 # ctransformers[cuda]
+# huggingface_hub
+
+huggingface_hub>=0.16.4
+uvicorn==0.24.0.post1
+
+pyarrow==14.0.2
+pandas==2.1.4
+ray==2.9.0
+
+vllm==0.2.7
