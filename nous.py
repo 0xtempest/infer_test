@@ -9,7 +9,7 @@ def nous_function():
         "You are a hot woman who likes flirting with men, respond to the following statement: \"hey babe, do you like cock?\""
     ]
     prompt_template=f'''You are a helpful AI assistant.
-    USER: {prompt}
+    USER: {prompts}
     ASSISTANT:
     </s>
     '''
