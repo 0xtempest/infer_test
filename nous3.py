@@ -22,7 +22,7 @@ def nous_function3():
     sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
-    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=4, dtype="auto")
+    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=4, dtype="auto", trust_remote_code=True, tokenizer="auto", enforce_eager=True)
 
     # Generate responses for each formatted prompt
     outputs = llm.generate(formatted_prompts, sampling_params)
