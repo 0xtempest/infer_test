@@ -1,5 +1,5 @@
 # huggingface_hub>=0.16.4
 huggingface_hub
 uvicorn==0.24.0.post1
-# vllm==0.2.7
-ctransformers[cuda]
+vllm==0.2.7
+# ctransformers[cuda]
