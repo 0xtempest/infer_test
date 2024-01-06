@@ -1,5 +1,7 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
+
 
 from huggingface_hub import hf_hub_download, snapshot_download
 from goliath import goliath_function
@@ -44,7 +46,7 @@ match user_input:
         nous_function2()
 
     case "nous3":
-        # hf_hub_download("NousResearch/Nous-Capybara-34B")
+        hf_hub_download("NousResearch/Nous-Capybara-34B")
         nous_function3()
 
     case _:
