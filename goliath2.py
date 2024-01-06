@@ -11,7 +11,7 @@ def goliath_function2():
 
     sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
 
-    llm = LLM(model="TheBloke/goliath-120b-AWQ", quantization="awq", dtype="auto")
+    llm = LLM(model="TheBloke/goliath-120b-AWQ", quantization="awq", tensor_parallel_size=4, dtype="auto")
 
     output = llm.generate(prompt_template, sampling_params)
     print(output)

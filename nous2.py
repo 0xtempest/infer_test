@@ -12,7 +12,7 @@ def nous_function2():
 
     sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
 
-    llm = LLM(model="NousResearch/Nous-Capybara-34B", quantization="awq", dtype="auto")
+    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=3, dtype="auto")
 
     output = llm.generate(prompt_template, sampling_params)
     print(output)
