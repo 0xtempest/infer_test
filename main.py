@@ -4,9 +4,11 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 os.environ["RAY_USE_MULTIPROCESSING_CPU_COUNT"] = "1"
 
 from huggingface_hub import hf_hub_download, snapshot_download
-from goliath import goliath_function
-from goliath2 import goliath_function2
-from goliath3 import goliath_function3
+from g_1 import g_1
+from g2 import g_2
+from g3 import g_3
+from g4 import g_4
+
 # from goliathc import goliath_functionc, download_model
 
 from nous import nous_function
@@ -17,17 +19,21 @@ from nous3 import nous_function3
 user_input = input("Which model do you want to use? (goliath/nous)")
 
 match user_input:
-    case "goliath":
+    case "g1":
         # hf_hub_download("TheBloke/goliath-120b-AWQ")
-        goliath_function()
+        g_1()
 
-    case "goliath2":
+    case "g2":
         # hf_hub_download("TheBloke/goliath-120b-AWQ")
-        goliath_function2()
+        g_2()
 
-    case "goliath3":
+    case "g3":
         snapshot_download("TheBloke/goliath-120b-AWQ")
-        goliath_function3()
+        g_3()
+        
+    case "g4":
+        snapshot_download("TheBloke/goliath-120b-AWQ")
+        g_4()
 
     # case "goliathc":
     #     repo_id = "TheBloke/goliath-120b-GGUF"

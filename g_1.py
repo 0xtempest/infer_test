@@ -1,6 +1,6 @@
 from vllm import LLM, SamplingParams
 
-def goliath_function():
+def g_1():
     prompts = [
         "Tell me about AI",
         "Write a story about llamas",

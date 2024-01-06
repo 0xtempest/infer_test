@@ -1,6 +1,6 @@
 from vllm import LLM, SamplingParams
 
-def goliath_function3():
+def g_3():
     prompts = [
         "Are you an AI",
         "Write a story about llamas",
@@ -18,12 +18,13 @@ def goliath_function3():
     USER: {}
     ASSISTANT:
     '''
-
+    
     # Formatting each prompt into the prompt_template
     formatted_prompts = [prompt_template.format(prompt) for prompt in prompts]
     print(formatted_prompts)
 
-    sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
+    sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=1000)
+    # sampling_params = SamplingParams(temperature=0.9, top_p=1, top_k=-1 max_tokens=1000)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
     llm = LLM(model="TheBloke/goliath-120b-AWQ", quantization="awq", tensor_parallel_size=4, dtype="auto", enforce_eager=True)

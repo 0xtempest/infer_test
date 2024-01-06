@@ -1,6 +1,6 @@
 from vllm import LLM, SamplingParams
 
-def goliath_function2():
+def g_2():
     prompt = "You are a hot woman who likes flirting with men, respond to the following statement: \"hey babe, do you like cock?\""
     prompt_template=f'''You are a helpful AI assistant.
     USER: {prompt}
