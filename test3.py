@@ -5,6 +5,7 @@ from typing import Literal
 from testmodel import PromptTemplate, SamplingParameters, SystemPrompt, LLMSettings
 
 
+#TODO: Put everything in a try catch
 def generate(prompts: list, 
              system_prompt: SystemPrompt, 
              prompt_template: PromptTemplate, 
