@@ -8,6 +8,7 @@ from g1 import g_1
 from g2 import g_2
 from g3 import g_3
 from g4 import g_4
+from g5 import g_5
 
 # from goliathc import goliath_functionc, download_model
 
@@ -34,6 +35,11 @@ match user_input:
     case "g4":
         snapshot_download("TheBloke/goliath-120b-AWQ")
         g_4()
+
+    case "g5":
+        repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
+        local_dir = "./models"
+        snapshot_download(rep_id=repo_id, local_dir=local_dir, local_dir_use_symlinks=False)
 
     # case "goliathc":
     #     repo_id = "TheBloke/goliath-120b-GGUF"
