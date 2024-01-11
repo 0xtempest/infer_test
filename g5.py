@@ -1,5 +1,5 @@
 import os, glob
-from model import ExLlama, ExLlamaCache, ExLlamaConfig
+from exllama2 import ExLlama, ExLlamaCache, ExLlamaConfig
 from tokenizer import ExLlamaTokenizer
 from generator import ExLlamaGenerator
 import time
