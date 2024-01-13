@@ -22,7 +22,9 @@ def g_7():
     # Initialize model
 
     # model_directory =  "/mnt/str/models/llama2-7b-exl2/4.0bpw/"
-    model_directory = "./models/goliath-120b-exl2-rpcal/4.85bpw"
+    # model_directory = "./models/goliath-120b-exl2-rpcal/4.85bpw"
+    model_directory = "./models"
+
 
     config = ExLlamaV2Config()
     config.model_dir = model_directory

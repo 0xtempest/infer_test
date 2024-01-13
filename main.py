@@ -1,7 +1,12 @@
 import os
+import logging
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 # os.environ["RAY_USE_MULTIPROCESSING_CPU_COUNT"] = "1"
+os.environ['TORCH_CPP_LOG_LEVEL'] = 'INFO'
+
+# Configure Python logging
+logging.basicConfig(level=logging.DEBUG)
 
 from huggingface_hub import hf_hub_download, snapshot_download
 from g1 import g_1
@@ -9,7 +14,9 @@ from g2 import g_2
 from g3 import g_3
 from g4 import g_4
 # from g5 import g_5
+logging.debug("Starting JIT compilation")
 from g7 import g_7
+logging.debug("JIT compilation finished")
 
 # from goliathc import goliath_functionc, download_model
 
@@ -51,11 +58,13 @@ match user_input:
     #     goliath_functionc()
 
     case "g7":
-        repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
+        # repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
+        repo_id = "Panchovix/goliath-120b-exl2-rpcal"
+        revision = "4.85bpw"
         local_dir = "./models"
-        snapshot_download(rep_id=repo_id, local_dir=local_dir, local_dir_use_symlinks=False)
-
-
+        snapshot_download(repo_id=repo_id, revision=revision, local_dir=local_dir, local_dir_use_symlinks=False)
+        g_7()
+    
     case "nous":
         # hf_hub_download("NousResearch/Nous-Capybara-34B")
         nous_function()
