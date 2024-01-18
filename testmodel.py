@@ -35,8 +35,6 @@ class SystemPromptAdminValues(BaseModel):
     end_emotional_prompt: Optional[str] = None
 
 
-
-
 class SystemPromptValues(BaseModel):
     '''
     name: this is the name of the system_prompt itself, usually called "system_prompt:"
@@ -100,10 +98,6 @@ class SystemPromptKeys(BaseModel):
     user_age: str
     user_gender: str
     user_name: str
-
-    # miscellaneous_information_section_description: str
-    # current_date: str
-    # bot_task: str
 
     function_calling_section_description: str
     function_calling_description: str
