@@ -18,6 +18,8 @@ from g4 import g_4
 # from g7 import g_7
 # logging.debug("JIT compilation finished")
 
+from d1 import d_1
+
 # from goliathc import goliath_functionc, download_model
 
 from nous import nous_function
@@ -43,6 +45,10 @@ match user_input:
     case "g4":
         snapshot_download("TheBloke/goliath-120b-AWQ")
         g_4()
+        
+    case "d1":
+        snapshot_download("TheBloke/MegaDolphin-120b-AWQ")
+        d_1()
 
     # case "g5":
     #     repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
