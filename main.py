@@ -1,6 +1,6 @@
 import os
 import logging
-os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 # os.environ["RAY_USE_MULTIPROCESSING_CPU_COUNT"] = "1"
@@ -21,6 +21,8 @@ from g4 import g_4
 
 from d1 import d_1
 from n4 import n_4
+from s1 import s_1
+
 
 
 # from goliathc import goliath_functionc, download_model
@@ -56,6 +58,10 @@ match user_input:
     case "n4":
         snapshot_download("TheBloke/Nous-Capybara-34B-AWQ")
         n_4()
+
+    case "s1":
+        snapshot_download("Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct")
+        s_1()
 
     # case "g5":
     #     repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
