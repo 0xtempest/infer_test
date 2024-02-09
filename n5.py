@@ -1,7 +1,7 @@
 from vllm import LLM, SamplingParams
 import time
 
-def n_4():
+def n_5():
     start_time = time.perf_counter()
     prompts = [
         "Are you an AI",
@@ -72,7 +72,6 @@ def n_4():
     # sampling_params = SamplingParams(temperature=0.9, top_p=1, top_k=-1 max_tokens=1000)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
-    llm = LLM(model="TheBloke/Nous-Capybara-34B-AWQ", quantization="awq", tensor_parallel_size=2, dtype="auto", enforce_eager=True, trust_remote_code=True)
     llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=4, dtype="auto", enforce_eager=True, trust_remote_code=True)
 
 
