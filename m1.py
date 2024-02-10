@@ -1,7 +1,7 @@
 from vllm import LLM, SamplingParams
 import time
 
-def n_5():
+def m_1():
     start_time = time.perf_counter()
     prompts = [
         "Are you an AI",
@@ -73,7 +73,7 @@ def n_5():
     # sampling_params = SamplingParams(temperature=0.9, top_p=1, top_k=-1 max_tokens=1000)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
-    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=4, dtype="auto", enforce_eager=True, trust_remote_code=True)
+    llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=6, dtype="auto", enforce_eager=True)
 
     # Generate responses for each formatted prompt
     outputs = llm.generate(formatted_prompts, sampling_params)

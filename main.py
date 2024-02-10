@@ -21,6 +21,8 @@ from g4 import g_4
 
 from d1 import d_1
 from s1 import s_1
+from m1 import m_1
+
 
 from n4 import n_4
 from n5 import n_5
@@ -68,6 +70,10 @@ match user_input:
     case "s1":
         snapshot_download("Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct")
         s_1()
+
+    case "m1":
+        snapshot_download("Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct")
+        m_1()
 
     # case "g5":
     #     repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
