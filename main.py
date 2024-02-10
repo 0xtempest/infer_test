@@ -79,7 +79,7 @@ match user_input:
         m_1()
 
     case "m2":
-        snapshot_download("ShinojiResearch/Senku-70B")
+        snapshot_download("ShinojiResearch/Senku-70B-Full")
         m_2()
 
     # case "g5":
