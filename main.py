@@ -73,7 +73,7 @@ match user_input:
         s_1()
 
     case "m1":
-        snapshot_download("Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct")
+        snapshot_download("152334H/miqu-1-70b-sf")
         m_1()
 
     # case "g5":
