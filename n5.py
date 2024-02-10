@@ -69,11 +69,11 @@ def n_5():
     formatted_prompts = [prompt_template.format(system_prompt=system_prompt, user_prompt=prompt) for prompt in prompts]
     print(formatted_prompts)
 
-    sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=4000)
+    sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=1000)
     # sampling_params = SamplingParams(temperature=0.9, top_p=1, top_k=-1 max_tokens=1000)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
-    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=4, dtype="auto", enforce_eager=True, trust_remote_code=True)
+    llm = LLM(model="NousResearch/Nous-Capybara-34B", tensor_parallel_size=8, dtype="auto", enforce_eager=True, trust_remote_code=True)
 
     # Generate responses for each formatted prompt
     outputs = llm.generate(formatted_prompts, sampling_params)

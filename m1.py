@@ -73,7 +73,7 @@ def m_1():
     # sampling_params = SamplingParams(temperature=0.9, top_p=1, top_k=-1 max_tokens=1000)
 
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
-    llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=6, dtype="auto", enforce_eager=True)
+    llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=8, dtype="auto", enforce_eager=True)
 
     # llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=6, dtype="fp16", enforce_eager=True, max_model_len=32000)
 
