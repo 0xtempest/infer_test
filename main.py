@@ -21,9 +21,11 @@ from g4 import g_4
 # logging.debug("JIT compilation finished")
 
 from d1 import d_1
-from s1 import s_1
-from m1 import m_1
 
+from s1 import s_1
+
+from m1 import m_1
+from m2 import m_2
 
 from n4 import n_4
 from n5 import n_5
@@ -75,6 +77,10 @@ match user_input:
     case "m1":
         snapshot_download("152334H/miqu-1-70b-sf")
         m_1()
+
+    case "m2":
+        snapshot_download("152334H/miqu-1-70b-sf")
+        m_2()
 
     # case "g5":
     #     repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"

@@ -1,7 +1,7 @@
 from vllm import LLM, SamplingParams
 import time
 
-def m_1():
+def m_2():
     start_time = time.perf_counter()
     prompts = [
         "Are you an AI",
