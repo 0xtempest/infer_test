@@ -75,6 +75,8 @@ def m_1():
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
     llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=6, dtype="auto", enforce_eager=True)
 
+    # llm = LLM(model="152334H/miqu-1-70b-sf", tensor_parallel_size=6, dtype="fp16", enforce_eager=True, max_model_len=32000)
+
     # Generate responses for each formatted prompt
     outputs = llm.generate(formatted_prompts, sampling_params)
 
