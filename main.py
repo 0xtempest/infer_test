@@ -2,7 +2,8 @@ import os
 import logging
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,5"
 # os.environ["RAY_USE_MULTIPROCESSING_CPU_COUNT"] = "1"
 os.environ['TORCH_CPP_LOG_LEVEL'] = 'INFO'
 
