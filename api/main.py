@@ -1,5 +1,6 @@
 from api.message import get_inference_server_reply
 from api.helpers import get_system_prompt
+from api.settings import Models
 
 async def main():
     system_prompt = get_system_prompt()
