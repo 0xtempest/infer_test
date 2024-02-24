@@ -34,3 +34,4 @@ pydantic >= 2.0  # Required for OpenAI server.
 aioprometheus[starlette]
 
 vllm==0.3.0
+httpx
