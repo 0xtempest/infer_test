@@ -1,5 +1,5 @@
 from transformers import AutoTokenizer
-from api.settings import Models
+from settings import Models
 
 def count_characters_and_tokens(text, model_name=Models.Goliath120b.name):
     # Count characters

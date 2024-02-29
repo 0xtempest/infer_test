@@ -1,5 +1,5 @@
-from api.helpers import count_characters_and_tokens
-from api.settings import TextInferenceServerConfig, Models
+from helpers import count_characters_and_tokens
+from settings import TextInferenceServerConfig, Models
 import httpx
 
 async def get_inference_server_reply(model, system_prompt, msg):
@@ -13,6 +13,10 @@ async def get_inference_server_reply(model, system_prompt, msg):
             prompt_template = models.Goliath120b.prompt_template
         case "NousCapy34b":
             prompt_template = models.NousCapy34b.prompt_template
+        case "Miqu120b":
+            prompt_template = models.Miqu120b.prompt_template
+        case _:
+            return "Error: Not a valid model."
 
     formatted_prompts = prompt_template.format(
         system_prompt=system_prompt, user_prompt=msg
