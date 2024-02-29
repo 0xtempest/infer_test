@@ -26,6 +26,7 @@ from s1 import s_1
 
 from m1 import m_1
 from m2 import m_2
+from m3 import m_3
 
 from n4 import n_4
 from n5 import n_5
@@ -81,6 +82,10 @@ match user_input:
     case "m2":
         snapshot_download("ShinojiResearch/Senku-70B-Full")
         m_2()
+
+    case "m3":
+        snapshot_download("wolfram/miquliz-120b-v2.0")
+        m_3()
 
     # case "g5":
     #     repo_id = "Panchovix/goliath-120b-exl2-rpcal/tree/4.85bpw"
