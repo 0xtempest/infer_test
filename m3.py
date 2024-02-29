@@ -73,7 +73,7 @@ def m_3 ():
     # Assuming LLM and SamplingParams are properly defined elsewhere in your code
 
     # llm = LLM(model="wolfram/miquliz-120b-v2.0", quantization="awq", tensor_parallel_size=4, dtype="auto", enforce_eager=True)
-    llm = LLM(model="wolfram/miquliz-120b-v2.0", tensor_parallel_size=4, dtype="auto", enforce_eager=True)
+    llm = LLM(model="wolfram/miquliz-120b-v2.0", tensor_parallel_size=8, dtype="auto", enforce_eager=True)
 
     # Generate responses for each formatted prompt
     outputs = llm.generate(formatted_prompts, sampling_params)
